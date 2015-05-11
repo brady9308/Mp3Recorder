@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:attrtest="http://schemas.android.com/apk/res/silicar.brady.mp3recorder"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="#333">
+
+    <view
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        class="silicar.brady.mp3recorder.Volume"
+        android:id="@+id/viewVolume"
+        attrtest:bg="@mipmap/volume"
+        attrtest:circleWidth="12dp"/>
+</LinearLayout>

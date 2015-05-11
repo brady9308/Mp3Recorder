@@ -1,0 +1,33 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+
+        ndk
+        {
+            moduleName "mp3lame"// 设置生成的文件名
+            cFlags "-DANDROID_NDK -D_RELEASE" //这个对应的是生成模式
+            ldLibs "m", "log", "jnigraphics" //这个对应 LOCAL_LDLIBS 但是需要去掉前面的 “l”
+            abiFilters "armeabi","armeabi-v7a" ,"x86","mips"//这个是对应的 APP_ABI
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    sourceSets { main { jni.srcDirs = ['src/main/jni', 'src/main/jni/'] } }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.2'
+}

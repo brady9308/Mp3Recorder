@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="firstColor" format="color" />
+    <attr name="secondColor" format="color" />
+    <attr name="circleWidth" format="dimension" />
+    <attr name="dotCount" format="integer" />
+    <attr name="splitSize" format="integer" />
+    <attr name="bg" format="reference"/>
+
+    <attr name="backgroundColor" format="color"/>
+    <attr name="selectColor" format="color"/>
+
+    <declare-styleable name="Volume">
+        <attr name="firstColor" />
+        <attr name="secondColor" />
+        <attr name="circleWidth" />
+        <attr name="dotCount" />
+        <attr name="splitSize" />
+        <attr name="bg" />
+    </declare-styleable>
+
+    <declare-styleable name="RecordQuality">
+        <attr name="backgroundColor"/>
+        <attr name="selectColor"/>
+    </declare-styleable>
+</resources>
